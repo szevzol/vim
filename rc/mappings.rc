@@ -1,0 +1,28 @@
+" vim:syntax=vim
+
+" Toggle tag bar
+map <F2> :TagbarToggle<CR>
+
+" Toggle file system explorer
+map <F3> :NERDTreeToggle<CR>
+
+" Switch from foo.cpp to foo.h (or vice versa)
+map <F4> :e %:p:s,.hh$,.X123X,:s,.cc$,.hh,:s,.X123X$,.cc,<CR> 
+
+" Switch to previous buffer
+map [b :bp<CR>
+
+" Switch to next buffer
+map ]b :bn<CR>
+
+" Switching buffers a bit faster
+map <F6> :buffers<CR>:buffer 
+
+" Open list of most recently used files
+map <F7> :CtrlPMRUFiles<CR>
+
+" Open buffer list, buffer selection by typing file name
+map <F8> :CtrlPBuffer<CR>
+
+" Open index of lines of opened buffers to make jumps faster
+map <F9> :CtrlPLine<CR>

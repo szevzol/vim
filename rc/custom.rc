@@ -1,0 +1,28 @@
+" vim:syntax=vim
+" my custom functions and commands
+
+" Stepping into /vobs/eba_main
+command -nargs=0 Eba :cd /vobs/eba_main
+
+" Function to run lsco and show results in quickfix window
+function! Lsco()
+  let temp_file = tempname()
+  let cmd = "! sh -c 'for f in `/proj/ossrc/eba/util/internal/unix/bin/lsco`; do echo \"$f:1:_\"; done;' > " . temp_file
+  silent exec cmd
+  exec "cgetfile " . temp_file
+  copen
+endfunction
+
+" Lsco command will call Lsco function
+command -nargs=0 Lsco call Lsco()
+
+" Function to open up graphical clearcase diff
+function! XDiff(path)
+  silent exec "!/usr/atria/bin/cleartool diff -gra -pre " . a:path
+endfunction
+
+" Open graphical clearcase diff for each lines in the current buffer
+" Each line should contain a file path
+function XDiffAllBuf()
+  %g/.*/call XDiff(getline("."))
+endfunction

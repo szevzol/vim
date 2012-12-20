@@ -1,0 +1,19 @@
+" main vimrc file
+
+" load vim options
+source ~/.vim/rc/vim.options.rc
+
+" load plugin options
+source ~/.vim/rc/plugin.options.rc
+
+" load keyboard mappings
+source ~/.vim/rc/mappings.rc
+
+" load my own functions and commands
+source ~/.vim/rc/custom.rc
+
+" load all plugins from ~/.vim/bundle/
+call pathogen#infect()
+
+" load all help text from ~/.vim/bundle/
+Helptags

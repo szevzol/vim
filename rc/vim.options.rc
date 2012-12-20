@@ -1,0 +1,113 @@
+" vim:syntax=vim
+
+" turn off vi-compatible mode
+set nocompatible
+
+" turn on line numbering
+set number
+
+" turn on highlighting search results
+set hlsearch
+
+" set size of command history
+set history=1000
+
+" use spaces instead of tabs
+set expandtab
+
+" set auto indent to two spaces
+set shiftwidth=4
+
+" set two spaces of indebtation when tab is pressed
+set tabstop=4
+
+" copy indent from current line when starting a new line
+set autoindent
+
+" enables automatic C/C++ indenting
+set cindent
+
+" don't let vim save stuff. I will do.
+set autowriteall!
+
+" I don't need backup files
+set nobackup
+
+" allow backspacing indents and between lines
+set backspace=indent,eol,start
+
+" Show the line and column number of the cursor position, separated by a
+"	comma.
+set ruler
+
+" While typing a search command, show where the pattern, as it was typed
+" so far, matches.
+set incsearch
+
+" Show (partial) command in the last line of the screen
+set showcmd
+
+" don't wrap long lines
+set nowrap
+
+" set coloured terminal
+set term=xtermc
+" set term=screen-256color
+"set term=xterm-256color
+
+" When set, the screen contents is restored when exiting Vim.  This also
+"	happens when executing external commands.
+set rs
+
+" Ignore case in search patterns.  Also used when searching in the tags
+"	file.
+set ic
+
+" Override the 'ignorecase' option if the search pattern contains upper
+"	case characters.
+set smartcase
+
+set nostartofline
+set hidden
+set wildmenu
+
+filetype plugin indent on
+syntax on
+
+set laststatus=2
+set statusline=%<%F%h%m%r%h%w%y\ %{&ff}%=line:%l/%L\ col:%c%V\ ascii:%b\ %P
+
+" Start build on compute farm
+set makeprg=cfrunp-ni\ cfcm
+
+set runtimepath=/home/eszezol/.vim,$PROJUTIL/external/noarch/share/vim/vim73
+
+" set tag file locations - currently I use Jozsi's tags - thanks for that! :)
+if $CCBRANCH != ""
+  set tags=./tags,tags,/home/ejzsfle/usr/tags/own_py_lib/tags,/home/ejzsfle/usr/tags/$CCBRANCH/tags
+else
+  set tags=./tags,tags,/home/ejzsfle/usr/tags/own_py_lib/tags
+endif
+
+if $PUTTY_LOGIN == "1"
+  " I want colours!
+  set t_Co=256
+  
+  " Thanks to Andris for this colorscheme! :)
+  colo esziand256
+else
+  colo koehler
+endif
+
+" Highlight insert mode in different colours
+"if version >= 700
+  "au InsertEnter * hi StatusLine ctermbg=darkred ctermfg=white
+  "au InsertLeave * hi StatusLine ctermbg=blue ctermfg=white
+"endif
+
+hi StatusLine ctermfg=white ctermbg=none
+if version >= 700
+  au InsertEnter * hi StatusLine ctermbg=1
+  au InsertLeave * hi StatusLine ctermfg=white ctermbg=none
+endif
+
