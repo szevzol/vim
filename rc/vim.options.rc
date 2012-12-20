@@ -80,7 +80,7 @@ set statusline=%<%F%h%m%r%h%w%y\ %{&ff}%=line:%l/%L\ col:%c%V\ ascii:%b\ %P
 " Start build on compute farm
 set makeprg=cfrunp-ni\ cfcm
 
-set runtimepath=/home/eszezol/.vim,$PROJUTIL/external/noarch/share/vim/vim73
+set runtimepath=~/.vim,$PROJUTIL/external/noarch/share/vim/vim73
 
 " set tag file locations - currently I use Jozsi's tags - thanks for that! :)
 if $CCBRANCH != ""
