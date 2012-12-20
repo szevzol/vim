@@ -1,19 +1,25 @@
 " main vimrc file
 
+if has("win32") || has ("win16")
+    let VIMDIR="Documents/GitHub/vim"
+else
+    let VIMDIR=.vim
+endif
+
 " load vim options
-source ~/.vim/rc/vim.options.rc
+exec ":source ~/" . VIMDIR . "/rc/vim.options.rc"
 
 " load plugin options
-source ~/.vim/rc/plugin.options.rc
+exec "source ~/" . VIMDIR . "/rc/plugin.options.rc"
 
 " load keyboard mappings
-source ~/.vim/rc/mappings.rc
+exec "source ~/" . VIMDIR . "/rc/mappings.rc"
 
 " load my own functions and commands
-source ~/.vim/rc/custom.rc
+exec "source ~/" . VIMDIR . "/rc/custom.rc"
 
-" load all plugins from ~/.vim/bundle/
+" load all plugins from ~/VIMDIR/bundle/
 call pathogen#infect()
 
-" load all help text from ~/.vim/bundle/
+" load all help text from ~/VIMDIR/bundle/
 Helptags
