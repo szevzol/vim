@@ -51,7 +51,7 @@ set showcmd
 set nowrap
 
 " set coloured terminal
-if has("win32") || has("win16")
+if ! has("win32") && ! has("win16")
   set term=xtermc
 endif
 " set term=screen-256color
