@@ -3,7 +3,7 @@
 if has("win32") || has ("win16")
     let VIMDIR="Documents/GitHub/vim"
 else
-    let VIMDIR=.vim
+    let VIMDIR=".vim"
 endif
 
 " load vim options
