@@ -51,7 +51,9 @@ set showcmd
 set nowrap
 
 " set coloured terminal
-set term=xtermc
+if has("win32") || has("win16")
+  set term=xtermc
+endif
 " set term=screen-256color
 "set term=xterm-256color
 
@@ -80,7 +82,11 @@ set statusline=%<%F%h%m%r%h%w%y\ %{&ff}%=line:%l/%L\ col:%c%V\ ascii:%b\ %P
 " Start build on compute farm
 set makeprg=cfrunp-ni\ cfcm
 
-set runtimepath=~/.vim,$PROJUTIL/external/noarch/share/vim/vim73
+if has("win32") || has("win16")
+  set runtimepath=C:\Program\ Files\vim\vim73,~/Documents/GitHub/vim
+else
+  set runtimepath=~/.vim,$PROJUTIL/external/noarch/share/vim/vim73
+endif
 
 " set tag file locations - currently I use Jozsi's tags - thanks for that! :)
 if $CCBRANCH != ""
