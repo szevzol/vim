@@ -10,7 +10,9 @@ let g:ctrlp_max_height = 30
 let g:ctrlp_buftag_ctags_bin = '/app/ctags/5.8/bin/ctags'
 
 " let CtrlP search for files by unix fins instead of vim's slower method
-let g:ctrlp_user_command = 'find %s -type f'
+if ! has("win32") && ! has("win16")
+  let g:ctrlp_user_command = 'find %s -type f'
+endif
 
 " open selected file in a new tab
 " let g:ctrlp_open_new_file = 't'
