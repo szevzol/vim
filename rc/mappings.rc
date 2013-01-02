@@ -10,10 +10,10 @@ map <F3> :NERDTreeToggle<CR>
 map <F4> :e %:p:s,.hh$,.X123X,:s,.cc$,.hh,:s,.X123X$,.cc,<CR> 
 
 " Switch to previous buffer
-map [b :bp<CR>
+map <S-TAB> :bp<CR>
 
 " Switch to next buffer
-map ]b :bn<CR>
+map <TAB> :bn<CR>
 
 " Switching buffers a bit faster
 map <F6> :buffers<CR>:buffer 
