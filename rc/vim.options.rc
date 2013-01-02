@@ -54,19 +54,17 @@ set nowrap
 if ! has("win32") && ! has("win16")
   set term=xtermc
 endif
-" set term=screen-256color
-"set term=xterm-256color
 
 " When set, the screen contents is restored when exiting Vim.  This also
 "	happens when executing external commands.
 set rs
 
 " Ignore case in search patterns.  Also used when searching in the tags
-"	file.
+" file.
 set ic
 
 " Override the 'ignorecase' option if the search pattern contains upper
-"	case characters.
+" case characters.
 set smartcase
 
 set nostartofline
@@ -83,6 +81,7 @@ set statusline=%<%F%h%m%r%h%w%y\ %{&ff}%=line:%l/%L\ col:%c%V\ ascii:%b\ %P
 set makeprg=cfrunp-ni\ cfcm
 
 if has("win32") || has("win16")
+  set autochdir
   set runtimepath=C:\Program\ Files\vim\vim73,~/Documents/GitHub/vim
 else
   set runtimepath=~/.vim,$PROJUTIL/external/noarch/share/vim/vim73
@@ -104,12 +103,6 @@ if $PUTTY_LOGIN == "1"
 else
   colo koehler
 endif
-
-" Highlight insert mode in different colours
-"if version >= 700
-  "au InsertEnter * hi StatusLine ctermbg=darkred ctermfg=white
-  "au InsertLeave * hi StatusLine ctermbg=blue ctermfg=white
-"endif
 
 hi StatusLine ctermfg=white ctermbg=none
 if version >= 700
