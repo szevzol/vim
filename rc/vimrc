@@ -1,22 +1,22 @@
 " main vimrc file
 
-if has("win32") || has ("win16")
+if has("win32") || has ("win16") || g:cygwin == 1
     let VIMDIR="Documents/GitHub/vim"
 else
     let VIMDIR=".vim"
 endif
 
 " load vim options
-exec ":source ~/" . VIMDIR . "/rc/vim.options.rc"
+exec ":source $HOME/" . VIMDIR . "/rc/vim.options.rc"
 
 " load plugin options
-exec "source ~/" . VIMDIR . "/rc/plugin.options.rc"
+exec "source $HOME/" . VIMDIR . "/rc/plugin.options.rc"
 
 " load keyboard mappings
-exec "source ~/" . VIMDIR . "/rc/mappings.rc"
+"exec "source $HOME/" . VIMDIR . "/rc/mappings.rc"
 
 " load my own functions and commands
-exec "source ~/" . VIMDIR . "/rc/custom.rc"
+exec "source $HOME/" . VIMDIR . "/rc/custom.rc"
 
 " load all plugins from ~/VIMDIR/bundle/
 call pathogen#infect()

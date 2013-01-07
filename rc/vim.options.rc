@@ -80,7 +80,7 @@ set statusline=%<%F%h%m%r%h%w%y\ %{&ff}%=line:%l/%L\ col:%c%V\ ascii:%b\ %P
 " Start build on compute farm
 set makeprg=cfrunp-ni\ cfcm
 
-if has("win32") || has("win16")
+if has("win32") || has("win16") || g:cygwin == 1
   set autochdir
   set runtimepath=C:\Program\ Files\vim\vim73,~/Documents/GitHub/vim
 else
