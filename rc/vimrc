@@ -1,6 +1,6 @@
 " main vimrc file
 
-if has("win32") || has ("win16") || g:cygwin == 1
+if has("win32") || has ("win16") || exists("g:cygwin")
     let VIMDIR="Documents/GitHub/vim"
 else
     let VIMDIR=".vim"
