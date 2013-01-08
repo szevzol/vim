@@ -13,7 +13,7 @@ exec ":source $HOME/" . VIMDIR . "/rc/vim.options.rc"
 exec "source $HOME/" . VIMDIR . "/rc/plugin.options.rc"
 
 " load keyboard mappings
-"exec "source $HOME/" . VIMDIR . "/rc/mappings.rc"
+exec "source $HOME/" . VIMDIR . "/rc/mappings.rc"
 
 " load my own functions and commands
 exec "source $HOME/" . VIMDIR . "/rc/custom.rc"
