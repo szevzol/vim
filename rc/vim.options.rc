@@ -102,15 +102,11 @@ else
   set tags=./tags,tags,/home/ejzsfle/usr/tags/own_py_lib/tags
 endif
 
-if $PUTTY_LOGIN == "1"
-  " I want colours!
-  set t_Co=256
-  
-  " Thanks to Andris for this colorscheme! :)
-  colo esziand256
-else
-  colo koehler
-endif
+" I want colours!
+set t_Co=256
+
+" Thanks to Andris for this colorscheme! :)
+colo esziand256
 
 hi StatusLine ctermfg=white ctermbg=none
 if version >= 700
