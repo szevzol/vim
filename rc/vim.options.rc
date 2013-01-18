@@ -107,10 +107,3 @@ set t_Co=256
 
 " Thanks to Andris for this colorscheme! :)
 colo esziand256
-
-hi StatusLine ctermfg=white ctermbg=none
-if version >= 700
-  au InsertEnter * hi StatusLine ctermbg=1
-  au InsertLeave * hi StatusLine ctermfg=white ctermbg=none
-endif
-
