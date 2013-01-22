@@ -7,7 +7,7 @@ else
 endif
 
 " load settings which are not public
-let private_file="source $HOME/" . VIMDIR . "/rc/vimrc.private"
+let private_file=expand("$HOME/" . VIMDIR . "/rc/vimrc.private")
 
 if filereadable(private_file)
     exec "source " . private_file
