@@ -4,7 +4,7 @@
 " Function to run lsco and show results in quickfix window
 function! Lsco()
   let temp_file = tempname()
-  let cmd = "! sh -c 'for f in `/proj/ossrc/eba/util/internal/unix/bin/lsco`; do echo \"$f:1:_\"; done;' > " . temp_file
+  let cmd = "! sh -c 'for f in `" . g:LSCO . "`; do echo \"$f:1:_\"; done;' > " . temp_file
   silent exec cmd
   exec "cgetfile " . temp_file
   copen
