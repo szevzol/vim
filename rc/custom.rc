@@ -1,9 +1,6 @@
 " vim:syntax=vim
 " my custom functions and commands
 
-" Stepping into /vobs/eba_main
-command -nargs=0 Eba :cd /vobs/eba_main
-
 " Function to run lsco and show results in quickfix window
 function! Lsco()
   let temp_file = tempname()
