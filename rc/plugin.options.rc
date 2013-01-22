@@ -6,25 +6,7 @@ let g:NERDTreeDirArrows=0
 " I like to see many results in CtrlP's match window
 let g:ctrlp_max_height = 30
 
-" ctags binary for CtrlP
-let g:ctrlp_buftag_ctags_bin = '/app/ctags/5.8/bin/ctags'
-
 " let CtrlP search for files by unix fins instead of vim's slower method
 if ! has("win32") && ! has("win16")
   let g:ctrlp_user_command = 'find %s -type f'
 endif
-
-" open selected file in a new tab
-" let g:ctrlp_open_new_file = 't'
-
-"let g:ctrlp_prompt_mappings = {
-  "\ 'AcceptSelection("e")': [],
-  "\ 'AcceptSelection("t")': ['<cr>', '<c-m>'],
-  "\ }
-
-let tagbar_ctags_bin='/app/ctags/5.8/bin/ctags'
-
-let GtagsCscope_Auto_Load = 1
-let GtagsCscope_Auto_Map = 1
-let GtagsCscope_Quiet = 1
-set cscopetag
