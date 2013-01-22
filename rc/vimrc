@@ -6,6 +6,9 @@ else
     let VIMDIR=".vim"
 endif
 
+" load settings which are not public
+let private_file="source $HOME/" . VIMDIR . "/rc/vimrc.private"
+
 " load vim options
 exec ":source $HOME/" . VIMDIR . "/rc/vim.options.rc"
 
@@ -17,9 +20,6 @@ exec "source $HOME/" . VIMDIR . "/rc/mappings.rc"
 
 " load my own functions and commands
 exec "source $HOME/" . VIMDIR . "/rc/custom.rc"
-
-" load settings which are not public
-let private_file="source $HOME/" . VIMDIR . "/rc/vimrc.private"
 
 if filereadable(private_file)
     exec "source " . private_file
