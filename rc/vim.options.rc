@@ -80,18 +80,13 @@ set statusline=%<%F%h%m%r%h%w%y\ %{&ff}%=line:%l/%L\ col:%c%V\ ascii:%b\ %P
 " Start build on compute farm
 set makeprg=cfrunp-ni\ cfcm
 
+" Here set only the windows settings, unix settings are in vimrc.private
 if has("win32") || has("win16") || exists("g:cygwin")
   set autochdir
   if g:cygwin == 1
     set runtimepath=/usr/share/vim/vim73,~/Documents/GitHub/vim
   else
     set runtimepath=C:\Program\ Files\vim\vim73
-  endif
-else
-  if exists("g:cudb")
-    set runtimepath=~/.vim,/app/vim/7.3.021/LMWP2/share/vim/vim73
-  else
-    set runtimepath=~/.vim,$PROJUTIL/external/noarch/share/vim/vim73
   endif
 endif
 
