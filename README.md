@@ -15,10 +15,10 @@ let VIMDIR="~/etc/vim"
 exec "source " . VIMDIR . "/rc/vimrc"
 ```
 
-* Create symlink ~/.vim that will link to the vim repo:
+* Create ~/.vim as a symlink that points to the vim repo:
 
 ```sh
 ln -s ~/etc/vim ~/.vim
 ```
 
-* Create ~/etc/vim/rc/vimrc.private. It should contain setting of runtimepath.
+* Create vimrc.private inside the repo. In example it will be ~/etc/vim/rc/vimrc.private. It should contain setting of runtimepath.
