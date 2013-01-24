@@ -51,9 +51,10 @@ set showcmd
 set nowrap
 
 " set coloured terminal
-if ! has("win32") && ! has("win16")
-  set term=xtermc
-endif
+"if ! has("win32") && ! has("win16")
+"  set term=xtermc
+"endif
+set term=xtermc
 
 " When set, the screen contents is restored when exiting Vim.  This also
 "	happens when executing external commands.
@@ -79,16 +80,6 @@ set statusline=%<%F%h%m%r%h%w%y\ %{&ff}%=line:%l/%L\ col:%c%V\ ascii:%b\ %P
 
 " Start build on compute farm
 set makeprg=cfrunp-ni\ cfcm
-
-" Here set only the windows settings, unix settings are in vimrc.private
-if has("win32") || has("win16") || exists("g:cygwin")
-  set autochdir
-  if g:cygwin == 1
-    set runtimepath=/usr/share/vim/vim73,~/Documents/GitHub/vim
-  else
-    set runtimepath=C:\Program\ Files\vim\vim73
-  endif
-endif
 
 " I want colours!
 set t_Co=256
