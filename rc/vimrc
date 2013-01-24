@@ -1,10 +1,6 @@
 " main vimrc file
 
-if has("win32") || has ("win16") || exists("g:cygwin")
-    let VIMDIR="Documents/GitHub/vim"
-else
-    let VIMDIR=".vim"
-endif
+" VIMDIR should be defined!
 
 " load settings which are not public
 let private_file=expand("$HOME/" . VIMDIR . "/rc/vimrc.private")
