@@ -86,3 +86,6 @@ set t_Co=256
 
 " Thanks to Andris for this colorscheme! :)
 colo esziand256
+
+" Autohotkey
+au BufNewFile,BufRead *.ahk setf autohotkey 
