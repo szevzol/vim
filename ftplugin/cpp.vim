@@ -8,6 +8,8 @@
  let g:clang_user_options = "-Wall"
  
  " Toggle QF update by hitting F8
- nnoremap <silent> <F8> :call g:ClangUpdateQuickFix()<CR>
+ nnoremap <silent> <F10> :call g:ClangUpdateQuickFix()<CR>
  
  let g:SuperTabDefaultCompletionType = "context"
+
+ let g:clang_debug = 1
