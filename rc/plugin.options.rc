@@ -1,36 +1,9 @@
 " vim:syntax=vim
 
-" Avoid NERDTree drawing arrows that results in stupid characters
-let g:NERDTreeDirArrows=0
-
 " I like to see many results in CtrlP's match window
 let g:ctrlp_max_height = 30
 
-" let CtrlP search for files by unix fins instead of vim's slower method
+" let CtrlP search for files by unix find instead of vim's slower method
 if ! has("win32") && ! has("win16")
   let g:ctrlp_user_command = 'find %s -type f'
 endif
-
-let g:clang_auto_select=1
-let g:clang_complete_auto=0
-let g:clang_complete_copen=1
-let g:clang_hl_errors=1
-let g:clang_periodic_quickfix=0
-let g:clang_snippets=1
-let g:clang_snippets_engine="clang_complete"
-let g:clang_conceal_snippets=1
-"let g:clang_exec="clang"
-let g:clang_exec="/proj/cudbdm/tools/external/clang-latest/bin/clang"
-let g:clang_user_options=""
-let g:clang_auto_user_options="path, .clang_complete"
-let g:clang_use_library=1
-let g:clang_library_path="/proj/cudbdm/tools/external/clang-latest/lib"
-let g:clang_sort_algo="priority"
-let g:clang_complete_macros=1
-let g:clang_complete_patterns=0
-nnoremap <Leader>q :call g:ClangUpdateQuickFix()<CR>
-
-let g:clic_filename="/home/eszezol/var/tags/index.db"
-nnoremap <Leader>r :call ClangGetReferences()<CR>
-nnoremap <Leader>d :call ClangGetDeclarations()<CR>
-nnoremap <Leader>s :call ClangGetSubclasses()<CR>
