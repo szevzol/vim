@@ -22,7 +22,7 @@ exec "source " . VIMDIR . "/rc/mappings.rc"
 exec "source " . VIMDIR . "/rc/custom.rc"
 
 " load all plugins from ~/VIMDIR/bundle/
-call pathogen#infect()
+call pathogen#runtime_append_all_bundles()
 
 " load all help text from ~/VIMDIR/bundle/
 Helptags
