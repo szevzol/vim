@@ -3,7 +3,10 @@ vim
 
 My vim configuration.
 
-Setting up
+This repository serves as a portable configuration for me.
+Feel free to use it but please beware of the fact that I didn't prepared it to be used by others.
+
+Set up
 ----------
 
 * Clone the repository. I usually put it in ~/etc. I use this as example in followings.
