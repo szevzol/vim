@@ -1,0 +1,2 @@
+let VIMDIR="~/etc/vim"
+exec "source " . VIMDIR . "/rc/vimrc"
