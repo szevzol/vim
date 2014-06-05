@@ -50,12 +50,6 @@ set showcmd
 " don't wrap long lines
 set nowrap
 
-" set coloured terminal
-"if ! has("win32") && ! has("win16")
-"  set term=xtermc
-"endif
-set term=xtermc
-
 " When set, the screen contents is restored when exiting Vim.  This also
 "	happens when executing external commands.
 set rs
