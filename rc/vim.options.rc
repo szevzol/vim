@@ -82,7 +82,7 @@ set statusline=%<%F%h%m%r%h%w%y\ %{&ff}%=line:%l/%L\ col:%c%V\ ascii:%b\ %P
 set makeprg=cfrunp-ni\ cfcm
 
 " I want colours!
-set t_Co=256
+let &t_Co=256
 
 " Thanks to Andris for this colorscheme! :)
 colo esziand256
