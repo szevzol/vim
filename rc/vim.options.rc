@@ -76,7 +76,7 @@ filetype plugin indent on
 syntax on
 
 set laststatus=2
-set statusline=%<%F%h%m%r%h%w%y\ %{&ff}%=line:%l/%L\ col:%c%V\ ascii:%b\ %P
+set statusline=%{fugitive#statusline()}%<%F%h%m%r%h%w%y\ %{&ff}%=line:%l/%L\ col:%c%V\ ascii:%b\ %P
 
 " Start build on compute farm
 set makeprg=cfrunp-ni\ cfcm
