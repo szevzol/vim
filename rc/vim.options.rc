@@ -15,10 +15,10 @@ set history=1000
 " use spaces instead of tabs
 set expandtab
 
-" set auto indent to two spaces
+" set auto indent to four spaces
 set shiftwidth=4
 
-" set two spaces of indebtation when tab is pressed
+" set four spaces of indentation when tab is pressed
 set tabstop=4
 
 " copy indent from current line when starting a new line
@@ -30,14 +30,14 @@ set cindent
 " don't let vim save stuff. I will do.
 set autowriteall!
 
-" I don't need backup files
+" avoid backup files
 set nobackup
 
 " allow backspacing indents and between lines
 set backspace=indent,eol,start
 
 " Show the line and column number of the cursor position, separated by a
-"	comma.
+" comma.
 set ruler
 
 " While typing a search command, show where the pattern, as it was typed
@@ -51,7 +51,7 @@ set showcmd
 set nowrap
 
 " When set, the screen contents is restored when exiting Vim.  This also
-"	happens when executing external commands.
+" happens when executing external commands.
 set rs
 
 " Ignore case in search patterns.  Also used when searching in the tags
@@ -62,24 +62,33 @@ set ic
 " case characters.
 set smartcase
 
+" cursor is kept in the same column (if possible).
 set nostartofline
+
+" opening a new file when the current buffer has unsaved changes causes files
+" to be hidden instead of closed
 set hidden
+
+" turn non enhanced command-line completion
 set wildmenu
 
+" enable:
+" - filetype detection
+" - loading the plugin files for specific file types
+" - loading the indent file for specific file types
 filetype plugin indent on
+
+" turn on syntax highlighting
 syntax on
 
+" last window will always  have a status line
 set laststatus=2
+
+" status line template including git information provided by fugitive plugin
 set statusline=%{fugitive#statusline()}%<%F%h%m%r%h%w%y\ %{&ff}%=line:%l/%L\ col:%c%V\ ascii:%b\ %P
 
-" Start build on compute farm
-set makeprg=cfrunp-ni\ cfcm
-
-" I want colours!
+" use all 256 colours
 let &t_Co=256
 
-" Thanks to Andris for this colorscheme! :)
+" nice colour scheme
 colo esziand256
-
-" Autohotkey
-au BufNewFile,BufRead *.ahk setf autohotkey 
